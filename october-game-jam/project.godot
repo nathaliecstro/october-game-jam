@@ -11,5 +11,13 @@ config_version=5
 [application]
 
 config/name="October Game Jam"
+run/main_scene="uid://dyy8xd2mr5i6v"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=720
+window/size/mode=3
+window/stretch/mode="canvas_items"
