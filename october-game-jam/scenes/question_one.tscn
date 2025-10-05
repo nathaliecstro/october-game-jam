@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c4kmhd08xyyp8"]
 
-[ext_resource type="Script" uid="uid://cp6ala5qvong6" path="res://scripts/game_scene.gd" id="1_ktmkp"]
+[ext_resource type="Script" uid="uid://cp6ala5qvong6" path="res://scripts/question_1_scene.gd" id="1_ktmkp"]
 [ext_resource type="Texture2D" uid="uid://meucgqtacj0j" path="res://art assets/Dummy game scene.jpg" id="2_nskfs"]
 [ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="3_gk52v"]
 [ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="4_15k0e"]
@@ -78,7 +78,6 @@ libraries = {
 }
 
 [node name="transition" parent="." instance=ExtResource("5_k3db3")]
-visible = false
 offset_left = -19.0
 offset_top = -17.0
 offset_right = 1040.0

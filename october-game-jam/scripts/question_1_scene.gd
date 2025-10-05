@@ -11,9 +11,11 @@ func _ready() -> void:
 	$ButtonManager/Denial.visible = true
 
 
-func _on_acceptance_pressed() -> void:
-	pass # Replace with function body.
+func _on_acceptance_pressed():
+	get_tree().change_scene_to_file("res://question_2_scene.tscn")
 
 
 func _on_denial_pressed():
 	Global.badEnding_counter +=1 
+	get_tree().change_scene_to_file("res://question_2_scene.tscn")
+	
