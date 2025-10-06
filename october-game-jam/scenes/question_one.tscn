@@ -23,7 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_y3j0m"]
 resource_name = "typing_text"
-length = 3.5
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -59,6 +59,16 @@ position = Vector2(514.50006, 360)
 scale = Vector2(4.1319995, 4.7999997)
 texture = ExtResource("3_gk52v")
 
+[node name="SceneIdentifier" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 367.0
+offset_top = 270.0
+offset_right = 511.0
+offset_bottom = 300.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("4_15k0e")
+text = "Question 1 Scene"
+
 [node name="question1" type="RichTextLabel" parent="."]
 texture_filter = 1
 offset_left = 148.0
@@ -67,7 +77,7 @@ offset_right = 650.6667
 offset_bottom = 604.3333
 scale = Vector2(1.5, 1.5)
 theme_override_fonts/normal_font = ExtResource("4_15k0e")
-text = "Welcome back Yaski, how are you feeling from...recents events?"
+text = "Welcome back Jaxie, how are you feeling from...those recents events?"
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
@@ -109,16 +119,6 @@ offset_right = 645.0
 offset_bottom = 691.0
 theme_override_fonts/font = ExtResource("4_15k0e")
 text = "..."
-
-[node name="SceneIdentifier" type="RichTextLabel" parent="."]
-texture_filter = 1
-offset_left = 367.0
-offset_top = 270.0
-offset_right = 511.0
-offset_bottom = 300.0
-scale = Vector2(2, 2)
-theme_override_fonts/normal_font = ExtResource("4_15k0e")
-text = "Question 1 Scene"
 
 [connection signal="pressed" from="ButtonManager/Acceptance" to="." method="_on_acceptance_pressed"]
 [connection signal="pressed" from="ButtonManager/Denial" to="." method="_on_denial_pressed"]

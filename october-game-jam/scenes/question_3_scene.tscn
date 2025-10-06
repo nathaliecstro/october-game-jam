@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://e4vbec38pb4n"]
+
+[ext_resource type="Script" uid="uid://cflld01428odo" path="res://scripts/question_3_scene.gd" id="1_tlrg0"]
+[ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="1_vb1wp"]
+[ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="2_tlrg0"]
+
+[sub_resource type="Animation" id="Animation_tlrg0"]
+resource_name = "typing_text"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_uj4u1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5y2vn"]
+_data = {
+&"RESET": SubResource("Animation_uj4u1"),
+&"typing_text": SubResource("Animation_tlrg0")
+}
+
+[node name="Question 3 Scene" type="Node2D"]
+script = ExtResource("1_tlrg0")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(514.50006, 360)
+scale = Vector2(4.1319995, 4.7999997)
+texture = ExtResource("1_vb1wp")
+
+[node name="SceneIdentifier" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 367.0
+offset_top = 270.0
+offset_right = 511.0
+offset_bottom = 300.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("2_tlrg0")
+text = "Question 3 Scene"
+
+[node name="question3" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 144.0
+offset_top = 567.0
+offset_right = 827.63635
+offset_bottom = 632.38464
+scale = Vector2(1.1, 1.1)
+theme_override_fonts/normal_font = ExtResource("2_tlrg0")
+text = "I'm sorry for all that happened. Your family got... brutally murdered on Evie Street last weekend. They went on a trip and all members got shot to their deaths."
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="question3Animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5y2vn")
+}
+
+[node name="ButtonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Acceptance" type="Button" parent="ButtonManager"]
+visible = false
+layout_mode = 0
+offset_left = 166.0
+offset_top = 635.0
+offset_right = 553.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("2_tlrg0")
+text = "It was bound to happen anyways...law of life?"
+
+[node name="Denial" type="Button" parent="ButtonManager"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 576.0
+offset_top = 636.0
+offset_right = 810.0
+offset_bottom = 693.0
+theme_override_fonts/font = ExtResource("2_tlrg0")
+text = "Yeah..."
+
+[connection signal="pressed" from="ButtonManager/Acceptance" to="." method="_on_acceptance_pressed"]
+[connection signal="pressed" from="ButtonManager/Denial" to="." method="_on_denial_pressed"]

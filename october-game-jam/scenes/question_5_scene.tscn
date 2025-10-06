@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://cb153wb5d4fxl"]
+
+[ext_resource type="Script" uid="uid://byh76uy1575eu" path="res://scripts/question_5_scene.gd" id="1_tody1"]
+[ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="2_dngr1"]
+[ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="3_al0y2"]
+
+[sub_resource type="Animation" id="Animation_465yw"]
+resource_name = "typing_text"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question5:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ft8fh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question5:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvkd0"]
+_data = {
+&"RESET": SubResource("Animation_ft8fh"),
+&"typing_text": SubResource("Animation_465yw")
+}
+
+[node name="Question 5 Scene" type="Node2D"]
+script = ExtResource("1_tody1")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(514.50006, 360)
+scale = Vector2(4.1319995, 4.7999997)
+texture = ExtResource("2_dngr1")
+
+[node name="SceneIdentifier" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 367.0
+offset_top = 270.0
+offset_right = 511.0
+offset_bottom = 300.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("3_al0y2")
+text = "Question 5 Scene"
+
+[node name="question5" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 149.0
+offset_top = 567.0
+offset_right = 644.3333
+offset_bottom = 610.3334
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/normal_font = ExtResource("3_al0y2")
+text = "During this entire session, have you been truthful? Are you aware of your actions Jaxie?"
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="question5Animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nvkd0")
+}
+
+[node name="ButtonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Acceptance" type="Button" parent="ButtonManager"]
+visible = false
+layout_mode = 0
+offset_left = 152.0
+offset_top = 635.0
+offset_right = 473.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("3_al0y2")
+text = "YEAH, SO WHAT? YOU'RE NEXT DOC!"
+
+[node name="Denial" type="Button" parent="ButtonManager"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 495.0
+offset_top = 635.0
+offset_right = 873.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("3_al0y2")
+text = "What are you talking about??"
+
+[connection signal="pressed" from="ButtonManager/Acceptance" to="." method="_on_acceptance_pressed"]
+[connection signal="pressed" from="ButtonManager/Denial" to="." method="_on_denial_pressed"]

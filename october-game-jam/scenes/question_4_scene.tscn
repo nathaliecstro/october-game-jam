@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqitfyko65ba3"]
+
+[ext_resource type="Script" uid="uid://bgee4sejvqm1h" path="res://scripts/question_4_scene.gd" id="1_8wilw"]
+[ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="2_c64id"]
+[ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="3_mar64"]
+
+[sub_resource type="Animation" id="Animation_eccsy"]
+resource_name = "typing_text"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_32ci4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cbtwx"]
+_data = {
+&"RESET": SubResource("Animation_32ci4"),
+&"typing_text": SubResource("Animation_eccsy")
+}
+
+[node name="Question 4 scene" type="Node2D"]
+script = ExtResource("1_8wilw")
+
+[node name="TextBox" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(514.50006, 360)
+scale = Vector2(4.1319995, 4.7999997)
+texture = ExtResource("2_c64id")
+
+[node name="SceneIdentifier" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 367.0
+offset_top = 270.0
+offset_right = 511.0
+offset_bottom = 300.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("3_mar64")
+text = "Question 4 Scene"
+
+[node name="question4" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 149.0
+offset_top = 567.0
+offset_right = 644.3333
+offset_bottom = 610.3334
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/normal_font = ExtResource("3_mar64")
+text = "So tell me, when was the last time you were with them?"
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="question4Animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cbtwx")
+}
+
+[node name="ButtonManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Acceptance" type="Button" parent="ButtonManager"]
+visible = false
+layout_mode = 0
+offset_left = 152.0
+offset_top = 635.0
+offset_right = 473.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("3_mar64")
+text = "I was with them when it happened."
+
+[node name="Denial" type="Button" parent="ButtonManager"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 495.0
+offset_top = 635.0
+offset_right = 873.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("3_mar64")
+text = "I stayed back home while they went on a trip."
+
+[connection signal="pressed" from="ButtonManager/Acceptance" to="." method="_on_acceptance_pressed"]
+[connection signal="pressed" from="ButtonManager/Denial" to="." method="_on_denial_pressed"]
