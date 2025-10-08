@@ -7,6 +7,8 @@ func _ready():
 	if(Global.badEnding_counter == 0):
 		$Default.visible = true
 	
+func _ready() -> void:
+	AudioPlayer.play_music_level()
 	$transition/AnimationPlayer.play("fade_out")
 	await get_tree().create_timer(1.5).timeout
 	
