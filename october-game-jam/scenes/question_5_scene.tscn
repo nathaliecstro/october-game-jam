@@ -47,19 +47,23 @@ _data = {
 [node name="Question 5 Scene" type="Node2D"]
 script = ExtResource("1_tody1")
 
-[node name="LakaruAngerl" type="Sprite2D" parent="."]
+[node name="LakaruAnger" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(515, 361)
 texture = ExtResource("2_465yw")
 
 [node name="LakaruConcerned" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(514, 361)
 texture = ExtResource("3_ft8fh")
 
 [node name="LakaruNeutral" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(512, 361)
 texture = ExtResource("4_nvkd0")
 
 [node name="TextBox" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(514.50006, 360)
 scale = Vector2(4.1319995, 4.7999997)

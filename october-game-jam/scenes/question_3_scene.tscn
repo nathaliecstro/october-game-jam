@@ -52,10 +52,12 @@ position = Vector2(505, 357)
 texture = ExtResource("2_a0ogo")
 
 [node name="LakaruAngerl" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(505, 359)
 texture = ExtResource("3_bskft")
 
 [node name="LakaruNeutral" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(503, 356)
 texture = ExtResource("4_5id3e")
 

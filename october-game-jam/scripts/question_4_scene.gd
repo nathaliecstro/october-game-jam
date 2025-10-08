@@ -11,6 +11,11 @@ func _ready():
 	# shows the acceptance and denial buttons on the screen
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
+	
+	if (Global.badEnding_counter == 4):
+		$LakaruConcerned.visible = true
+	else:
+		$LakaruNeutral.visible = true
 
 
 func _on_acceptance_pressed():

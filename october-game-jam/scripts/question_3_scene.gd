@@ -11,6 +11,8 @@ func _ready():
 	# shows the acceptance and denial buttons on the screen
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
+	
+
 
 
 func _on_acceptance_pressed():

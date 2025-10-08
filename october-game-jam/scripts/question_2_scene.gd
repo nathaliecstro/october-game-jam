@@ -12,6 +12,11 @@ func _ready():
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
 	
+	if (Global.badEnding_counter != 0):
+		$LakaruConcerned.visible = true
+	else:
+		$LakaruNeutral.visible = true
+	
 
 func _on_acceptance_pressed():
 	

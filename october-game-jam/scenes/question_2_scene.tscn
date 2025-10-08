@@ -48,18 +48,22 @@ _data = {
 script = ExtResource("1_ap3qh")
 
 [node name="LakaruConcerned" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(513, 363)
 texture = ExtResource("2_t6asq")
 
 [node name="LakaruAngerl" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(512, 365)
 texture = ExtResource("3_6abnd")
 
 [node name="LakaruNeutral" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(514, 365)
 texture = ExtResource("4_f3nmo")
 
 [node name="TextBox" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(514.50006, 360)
 scale = Vector2(4.1319995, 4.7999997)

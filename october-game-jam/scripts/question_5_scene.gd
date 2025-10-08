@@ -1,6 +1,5 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -11,6 +10,12 @@ func _ready():
 	# shows the acceptance and denial buttons on the screen
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
+	
+	if (Global.badEnding_counter > 4):
+		$LakaruAnger.visible = true
+	else:
+		$LakaruConcerned.visible = true
+		
 	
 
 
