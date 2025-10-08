@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bggx2gj21vwdy"]
+[gd_scene load_steps=10 format=3 uid="uid://ct21sot1m88mm"]
 
 [ext_resource type="Script" uid="uid://bjgd7dxgvb2ty" path="res://scripts/question_2_scene.gd" id="1_ap3qh"]
 [ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="2_eumhk"]
+[ext_resource type="Texture2D" uid="uid://7luj6m86xc7f" path="res://art assets/Lakaru_Concerned.png" id="2_t6asq"]
 [ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="3_0d3co"]
+[ext_resource type="Texture2D" uid="uid://cyvcvyprjnm2e" path="res://art assets/Lakaru_Angerl.png" id="3_6abnd"]
+[ext_resource type="Texture2D" uid="uid://c3knxf7hl1ca3" path="res://art assets/Lakaru_Neutral.png" id="4_f3nmo"]
 
 [sub_resource type="Animation" id="Animation_rc1rl"]
 length = 0.001
@@ -43,6 +46,18 @@ _data = {
 
 [node name="Question 2 Scene" type="Node2D"]
 script = ExtResource("1_ap3qh")
+
+[node name="LakaruConcerned" type="Sprite2D" parent="."]
+position = Vector2(495, 362)
+texture = ExtResource("2_t6asq")
+
+[node name="LakaruAngerl" type="Sprite2D" parent="."]
+position = Vector2(495, 361)
+texture = ExtResource("3_6abnd")
+
+[node name="LakaruNeutral" type="Sprite2D" parent="."]
+position = Vector2(495, 363)
+texture = ExtResource("4_f3nmo")
 
 [node name="TextBox" type="Sprite2D" parent="."]
 texture_filter = 1

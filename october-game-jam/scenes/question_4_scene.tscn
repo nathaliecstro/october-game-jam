@@ -1,8 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqitfyko65ba3"]
+[gd_scene load_steps=10 format=3 uid="uid://cwkl4883g2dac"]
 
 [ext_resource type="Script" uid="uid://bgee4sejvqm1h" path="res://scripts/question_4_scene.gd" id="1_8wilw"]
 [ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="2_c64id"]
+[ext_resource type="Texture2D" uid="uid://cyvcvyprjnm2e" path="res://art assets/Lakaru_Angerl.png" id="2_eccsy"]
+[ext_resource type="Texture2D" uid="uid://7luj6m86xc7f" path="res://art assets/Lakaru_Concerned.png" id="3_32ci4"]
 [ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="3_mar64"]
+[ext_resource type="Texture2D" uid="uid://c3knxf7hl1ca3" path="res://art assets/Lakaru_Neutral.png" id="4_cbtwx"]
+
+[sub_resource type="Animation" id="Animation_32ci4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("question4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_eccsy"]
 resource_name = "typing_text"
@@ -20,21 +38,6 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_32ci4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("question4:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cbtwx"]
 _data = {
 &"RESET": SubResource("Animation_32ci4"),
@@ -43,6 +46,18 @@ _data = {
 
 [node name="Question 4 scene" type="Node2D"]
 script = ExtResource("1_8wilw")
+
+[node name="LakaruAngerl" type="Sprite2D" parent="."]
+position = Vector2(496, 360)
+texture = ExtResource("2_eccsy")
+
+[node name="LakaruConcerned" type="Sprite2D" parent="."]
+position = Vector2(497, 360)
+texture = ExtResource("3_32ci4")
+
+[node name="LakaruNeutral" type="Sprite2D" parent="."]
+position = Vector2(497, 360)
+texture = ExtResource("4_cbtwx")
 
 [node name="TextBox" type="Sprite2D" parent="."]
 texture_filter = 1

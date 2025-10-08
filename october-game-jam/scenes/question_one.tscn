@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4kmhd08xyyp8"]
+[gd_scene load_steps=10 format=3 uid="uid://bouc0dnpwfg5w"]
 
 [ext_resource type="Script" uid="uid://cp6ala5qvong6" path="res://scripts/question_1_scene.gd" id="1_ktmkp"]
+[ext_resource type="Texture2D" uid="uid://c3knxf7hl1ca3" path="res://art assets/Lakaru_Neutral.png" id="2_gk52v"]
 [ext_resource type="Texture2D" uid="uid://meucgqtacj0j" path="res://art assets/Dummy game scene.jpg" id="2_nskfs"]
 [ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="3_gk52v"]
 [ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="4_15k0e"]
@@ -46,6 +47,11 @@ _data = {
 [node name="Question 1 Scene" type="Node2D"]
 script = ExtResource("1_ktmkp")
 
+[node name="LakaruNeutral" type="Sprite2D" parent="."]
+position = Vector2(514, 361)
+scale = Vector2(1, 1.0000001)
+texture = ExtResource("2_gk52v")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
@@ -88,10 +94,11 @@ libraries = {
 }
 
 [node name="transition" parent="." instance=ExtResource("5_k3db3")]
-offset_left = -19.0
-offset_top = -17.0
-offset_right = 1040.0
-offset_bottom = 737.0
+visible = false
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 1039.0
+offset_bottom = 736.0
 
 [node name="ButtonManager" type="Control" parent="."]
 layout_mode = 3
