@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bptnopwyd2wb1"]
+
+[ext_resource type="Texture2D" uid="uid://b5r7nxb26i6ku" path="res://art assets/Jaxielookatwindow.png" id="1_g6t57"]
+
+[node name="IntroScene" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(505, 361)
+scale = Vector2(1.0528319, 1.0972613)
+texture = ExtResource("1_g6t57")
