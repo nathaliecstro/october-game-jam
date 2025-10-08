@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyy8xd2mr5i6v"]
+[gd_scene load_steps=11 format=3 uid="uid://dyy8xd2mr5i6v"]
 
 [ext_resource type="Script" uid="uid://cdqdoqreic2w6" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://cw1x3u8rpsthm" path="res://art assets/Black main menu.jpg" id="2_rtw2f"]
@@ -8,14 +8,31 @@
 [ext_resource type="Texture2D" uid="uid://de48qkaoty8hh" path="res://art assets/hover quit .PNG" id="6_5dd4i"]
 [ext_resource type="PackedScene" uid="uid://dv7dtkk2kf7sa" path="res://scenes/fade_transition.tscn" id="7_oa1go"]
 [ext_resource type="AudioStream" uid="uid://cpdxfv58lqrwo" path="res://art assets/music/scary-horror-music-351315.mp3" id="8_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://38obnawp51tn" path="res://art assets/yax_sil.png" id="9_5dd4i"]
+[ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="10_lgwnu"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_l6cm7")
 
 [node name="menu background" type="Sprite2D" parent="."]
-position = Vector2(513, 358.5)
-scale = Vector2(0.43747345, 0.44207317)
+position = Vector2(166, 323.00003)
+scale = Vector2(0.7833828, 0.5920732)
 texture = ExtResource("2_rtw2f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 28.000004
+offset_top = 25.000002
+offset_right = 188.14285
+offset_bottom = 48.14286
+scale = Vector2(7, 7)
+theme_override_colors/default_color = Color(1, 0.5686275, 0.99215686, 1)
+theme_override_fonts/normal_font = ExtResource("10_lgwnu")
+text = "One Last Session"
+
+[node name="YaxSil" type="Sprite2D" parent="."]
+position = Vector2(283.00003, 490.99997)
+scale = Vector2(1.5479167, 1.6335937)
+texture = ExtResource("9_5dd4i")
 
 [node name="Button Manager" type="Control" parent="."]
 layout_mode = 3
@@ -26,10 +43,10 @@ offset_bottom = 40.0
 [node name="Start Game" type="TextureButton" parent="Button Manager"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 450.0
-offset_top = 314.0
-offset_right = 1898.5713
-offset_bottom = 582.5713
+offset_left = 464.0
+offset_top = 286.99997
+offset_right = 1912.5713
+offset_bottom = 555.5713
 scale = Vector2(0.35, 0.35)
 texture_normal = ExtResource("3_oa1go")
 texture_hover = ExtResource("4_tbmy8")
@@ -37,10 +54,10 @@ texture_hover = ExtResource("4_tbmy8")
 [node name="Quit" type="TextureButton" parent="Button Manager"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 589.0
-offset_top = 441.0
-offset_right = 1265.6666
-offset_bottom = 761.0
+offset_left = 605.0
+offset_top = 397.00003
+offset_right = 1281.6666
+offset_bottom = 717.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("5_jk1qb")
 texture_hover = ExtResource("6_5dd4i")

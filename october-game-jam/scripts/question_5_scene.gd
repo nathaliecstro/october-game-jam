@@ -5,11 +5,8 @@ func _ready():
 	
 	if (Global.badEnding_counter > 3):
 		$LakaruAnger.visible = true
-		$Cops.visible = true
 		
 	else:
-		#$Twisted.visible = true
-		$Default.visible = true
 		$LakaruConcerned.visible = true
 	
 	# plays the typewriter effect animation
@@ -25,11 +22,11 @@ func _ready():
 	
 
 
-func _on_acceptance_pressed() -> void:
-	pass # Replace with function body.
-	# when this acceptance button is pressed, it leads to the true ending
+func _on_acceptance_pressed():
+	get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 
 
-func _on_denial_pressed() -> void:
-	pass # Replace with function body.
+func _on_denial_pressed():
+	Global.badEnding_counter += 1
+	get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 	# when this denial button is pressed, it leads to the bad ending

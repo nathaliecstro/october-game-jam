@@ -1,0 +1,158 @@
+[gd_scene load_steps=15 format=3 uid="uid://ccktpw0np7yis"]
+
+[ext_resource type="Script" uid="uid://dlds8l6hyyatg" path="res://scripts/end_screen.gd" id="1_vj8vg"]
+[ext_resource type="Texture2D" uid="uid://caocs3f4y051y" path="res://art assets/New_Background_.png" id="2_plosh"]
+[ext_resource type="Texture2D" uid="uid://b2kvryljv6gdd" path="res://art assets/New_Twisted_.png" id="3_4j4el"]
+[ext_resource type="Texture2D" uid="uid://bdwgrdcykpgsw" path="res://art assets/COPS_.png" id="4_4j4el"]
+[ext_resource type="Texture2D" uid="uid://7luj6m86xc7f" path="res://art assets/Lakaru_Concerned.png" id="4_wke0n"]
+[ext_resource type="Texture2D" uid="uid://c8s00fb1lcpiv" path="res://art assets/Jaxie.png" id="5_um0j2"]
+[ext_resource type="Texture2D" uid="uid://c0oah3tfvwqln" path="res://art assets/textbox sample3.png" id="6_fix67"]
+[ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="8_wke0n"]
+
+[sub_resource type="Animation" id="Animation_um0j2"]
+resource_name = "typing"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Win:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_fix67"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Win:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qyl73"]
+_data = {
+&"RESET": SubResource("Animation_fix67"),
+&"typing": SubResource("Animation_um0j2")
+}
+
+[sub_resource type="Animation" id="Animation_7ycdd"]
+resource_name = "typing"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lose:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_d62ht"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lose:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ilt1u"]
+_data = {
+&"RESET": SubResource("Animation_d62ht"),
+&"typing": SubResource("Animation_7ycdd")
+}
+
+[node name="EndScreen" type="Node"]
+script = ExtResource("1_vj8vg")
+
+[node name="NewBackground" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(512.49994, 362.50003)
+scale = Vector2(1.0697916, 1.1234375)
+texture = ExtResource("2_plosh")
+
+[node name="NewTwisted" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(511.5, 360.5)
+scale = Vector2(1.0697916, 1.1296874)
+texture = ExtResource("3_4j4el")
+
+[node name="Cops" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(513.5, 362.5)
+scale = Vector2(1.0697917, 1.1234375)
+texture = ExtResource("4_4j4el")
+
+[node name="LakaruConcerned" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(508, 355)
+texture = ExtResource("4_wke0n")
+
+[node name="Jaxie" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(285.00003, 356)
+scale = Vector2(1.0979167, 1.1125)
+texture = ExtResource("5_um0j2")
+
+[node name="TextboxSample3" type="Sprite2D" parent="."]
+position = Vector2(512, 358.5)
+scale = Vector2(4.120001, 4.8333335)
+texture = ExtResource("6_fix67")
+
+[node name="Win" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 0.039
+anchor_bottom = 0.056
+offset_left = 191.0
+offset_top = 515.0
+offset_right = 453.28622
+offset_bottom = 576.18
+scale = Vector2(2.25, 2.25)
+theme_override_fonts/normal_font = ExtResource("8_wke0n")
+text = "I'm sorry Jaxie but I tried to help."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Lose" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 208.0
+offset_top = 517.0
+offset_right = 524.5
+offset_bottom = 721.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("8_wke0n")
+text = "Stop lying to yourself. You and I are the same."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="WinAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qyl73")
+}
+
+[node name="LoseAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ilt1u")
+}

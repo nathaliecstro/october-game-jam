@@ -6,7 +6,6 @@ func _ready():
 	
 	if (Global.badEnding_counter >= 0):
 		$LakaruConcerned.visible = true
-		$Default.visible = true
 	else:
 		$LakaruNeutral.visible = true
 	

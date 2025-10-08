@@ -50,7 +50,6 @@ _data = {
 script = ExtResource("1_ap3qh")
 
 [node name="Default" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(513.25, 375.49997)
 scale = Vector2(1.0671874, 1.0828125)
 texture = ExtResource("2_f3nmo")
