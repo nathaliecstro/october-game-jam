@@ -48,15 +48,15 @@ _data = {
 script = ExtResource("1_ap3qh")
 
 [node name="LakaruConcerned" type="Sprite2D" parent="."]
-position = Vector2(495, 362)
+position = Vector2(513, 363)
 texture = ExtResource("2_t6asq")
 
 [node name="LakaruAngerl" type="Sprite2D" parent="."]
-position = Vector2(495, 361)
+position = Vector2(512, 365)
 texture = ExtResource("3_6abnd")
 
 [node name="LakaruNeutral" type="Sprite2D" parent="."]
-position = Vector2(495, 363)
+position = Vector2(514, 365)
 texture = ExtResource("4_f3nmo")
 
 [node name="TextBox" type="Sprite2D" parent="."]
