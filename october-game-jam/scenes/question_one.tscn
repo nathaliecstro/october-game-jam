@@ -48,6 +48,7 @@ _data = {
 script = ExtResource("1_ktmkp")
 
 [node name="LakaruNeutral" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(514, 361)
 scale = Vector2(1, 1.0000001)
 texture = ExtResource("2_gk52v")
