@@ -90,6 +90,7 @@ scale = Vector2(4.1319995, 4.7999997)
 texture = ExtResource("2_c64id")
 
 [node name="SceneIdentifier" type="RichTextLabel" parent="."]
+visible = false
 texture_filter = 1
 offset_left = 367.0
 offset_top = 270.0
