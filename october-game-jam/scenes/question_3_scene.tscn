@@ -50,8 +50,8 @@ _data = {
 script = ExtResource("1_tlrg0")
 
 [node name="Default" type="Sprite2D" parent="."]
-position = Vector2(512.25, 372.99997)
-scale = Vector2(1.0692707, 1.0749999)
+position = Vector2(512.24994, 375)
+scale = Vector2(1.0692708, 1.0812501)
 texture = ExtResource("2_5id3e")
 
 [node name="Twisted" type="Sprite2D" parent="."]
@@ -100,7 +100,7 @@ offset_right = 827.63635
 offset_bottom = 632.38464
 scale = Vector2(1.1, 1.1)
 theme_override_fonts/normal_font = ExtResource("2_tlrg0")
-text = "I'm sorry for all that happened. Your family got... brutally murdered on Evie Street last weekend. They went on a trip and all members got shot to their deaths."
+text = "I'm sorry for all that happened. Your family got... brutally murdered on Evie Street last weekend. They went on a trip and all members got stabbed to their deaths."
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0

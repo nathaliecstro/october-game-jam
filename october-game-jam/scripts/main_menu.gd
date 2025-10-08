@@ -19,4 +19,4 @@ func _on_fade_timer_timeout():
 	
 	# depending on what the button_type's value is, it changes to that specific scene
 	if button_type == "start":
-		get_tree().change_scene_to_file("res://scenes/question_one.tscn")
+		get_tree().change_scene_to_file("res://scenes/prologue.tscn")
