@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpdxfv58lqrwo"
+path="res://.godot/imported/scary-horror-music-351315.mp3-265a920db97ef3ee64bf3e74010f7bbf.mp3str"
+
+[deps]
+
+source_file="res://art assets/music/scary-horror-music-351315.mp3"
+dest_files=["res://.godot/imported/scary-horror-music-351315.mp3-265a920db97ef3ee64bf3e74010f7bbf.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

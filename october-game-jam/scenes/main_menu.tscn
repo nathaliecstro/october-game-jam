@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyy8xd2mr5i6v"]
+[gd_scene load_steps=9 format=3 uid="uid://dyy8xd2mr5i6v"]
 
 [ext_resource type="Script" uid="uid://cdqdoqreic2w6" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://cw1x3u8rpsthm" path="res://art assets/Black main menu.jpg" id="2_rtw2f"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b0y1g41jv4422" path="res://art assets/quit.PNG" id="5_jk1qb"]
 [ext_resource type="Texture2D" uid="uid://de48qkaoty8hh" path="res://art assets/hover quit .PNG" id="6_5dd4i"]
 [ext_resource type="PackedScene" uid="uid://dv7dtkk2kf7sa" path="res://scenes/fade_transition.tscn" id="7_oa1go"]
+[ext_resource type="AudioStream" uid="uid://cpdxfv58lqrwo" path="res://art assets/music/scary-horror-music-351315.mp3" id="8_tbmy8"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_l6cm7")
@@ -52,6 +53,11 @@ offset_right = 1038.0
 offset_bottom = 745.00006
 
 [node name="Fade_timer" type="Timer" parent="transition"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tbmy8")
+volume_db = -2.0
+autoplay = true
 
 [connection signal="pressed" from="Button Manager/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="Button Manager/Quit" to="." method="_on_quit_pressed"]
