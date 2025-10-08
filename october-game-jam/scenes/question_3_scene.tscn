@@ -48,6 +48,7 @@ _data = {
 script = ExtResource("1_tlrg0")
 
 [node name="LakaruConcerned" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(505, 357)
 texture = ExtResource("2_a0ogo")
 

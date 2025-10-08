@@ -3,7 +3,11 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	if (Global.badEnding_counter > 1):
+		$LakaruConcerned.visible = true
+	else: 
+		$LakaruNeutral.visible = true
+		
 	# plays the typewriter effect animation
 	$question3Animation.play("typing_text")
 	await get_tree().create_timer(4.0).timeout
@@ -11,9 +15,6 @@ func _ready():
 	# shows the acceptance and denial buttons on the screen
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
-	
-
-
 
 func _on_acceptance_pressed():
 	
