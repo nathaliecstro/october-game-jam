@@ -4,6 +4,11 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	if (Global.badEnding_counter == 4):
+		$LakaruConcerned.visible = true
+	else:
+		$LakaruNeutral.visible = true
+	
 	# plays the typewriter effect animation
 	$question4Animation.play("typing_text")
 	await get_tree().create_timer(4.0).timeout
@@ -12,10 +17,6 @@ func _ready():
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
 	
-	if (Global.badEnding_counter == 4):
-		$LakaruConcerned.visible = true
-	else:
-		$LakaruNeutral.visible = true
 
 
 func _on_acceptance_pressed():

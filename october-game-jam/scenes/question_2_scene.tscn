@@ -63,7 +63,6 @@ position = Vector2(514, 365)
 texture = ExtResource("4_f3nmo")
 
 [node name="TextBox" type="Sprite2D" parent="."]
-visible = false
 texture_filter = 1
 position = Vector2(514.50006, 360)
 scale = Vector2(4.1319995, 4.7999997)
