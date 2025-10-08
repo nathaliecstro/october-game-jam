@@ -58,14 +58,14 @@ texture = ExtResource("2_v5cuf")
 
 [node name="Default" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(515, 353)
-scale = Vector2(1.0635417, 1.0125)
+position = Vector2(513.25, 375)
+scale = Vector2(1.0671874, 1.0812501)
 texture = ExtResource("3_poud7")
 
 [node name="Twisted" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(512, 355.5)
-scale = Vector2(1.0645833, 1.0234375)
+position = Vector2(512, 373.49997)
+scale = Vector2(1.0645833, 1.0796875)
 texture = ExtResource("4_4w7li")
 
 [node name="LakaruAnger" type="Sprite2D" parent="."]

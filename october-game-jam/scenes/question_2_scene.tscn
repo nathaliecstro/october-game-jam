@@ -51,14 +51,14 @@ script = ExtResource("1_ap3qh")
 
 [node name="Default" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(513.25, 353)
-scale = Vector2(1.0671874, 1.0125)
+position = Vector2(513.25, 375.49997)
+scale = Vector2(1.0671874, 1.0828125)
 texture = ExtResource("2_f3nmo")
 
 [node name="Twisted" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(511.5, 355.5)
-scale = Vector2(1.065625, 1.0234375)
+position = Vector2(511.5, 375)
+scale = Vector2(1.065625, 1.0843749)
 texture = ExtResource("3_yxs8l")
 
 [node name="LakaruConcerned" type="Sprite2D" parent="."]

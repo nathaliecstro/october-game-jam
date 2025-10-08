@@ -10,6 +10,7 @@ func _ready():
 		$Twisted.visible = false
 		
 	else: 
+		$Default.visible = true
 		$LakaruNeutral.visible = true
 		
 	# plays the typewriter effect animation

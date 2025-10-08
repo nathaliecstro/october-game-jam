@@ -50,15 +50,14 @@ _data = {
 script = ExtResource("1_tlrg0")
 
 [node name="Default" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(515, 353)
-scale = Vector2(1.0635417, 1.0125)
+position = Vector2(512.25, 372.99997)
+scale = Vector2(1.0692707, 1.0749999)
 texture = ExtResource("2_5id3e")
 
 [node name="Twisted" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(512, 355.5)
-scale = Vector2(1.0645833, 1.0234375)
+position = Vector2(512, 374)
+scale = Vector2(1.0645833, 1.08125)
 texture = ExtResource("3_l1eab")
 
 [node name="LakaruConcerned" type="Sprite2D" parent="."]
