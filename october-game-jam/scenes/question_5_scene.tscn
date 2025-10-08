@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0hjscvl57j5h"]
+[gd_scene load_steps=13 format=3 uid="uid://c0hjscvl57j5h"]
 
 [ext_resource type="Script" uid="uid://byh76uy1575eu" path="res://scripts/question_5_scene.gd" id="1_tody1"]
 [ext_resource type="Texture2D" uid="uid://cyvcvyprjnm2e" path="res://art assets/Lakaru_Angerl.png" id="2_465yw"]
 [ext_resource type="Texture2D" uid="uid://cjsm3a5okxuoy" path="res://art assets/textbox sample4.png" id="2_dngr1"]
+[ext_resource type="Texture2D" uid="uid://bdwgrdcykpgsw" path="res://art assets/COPS_.png" id="2_v5cuf"]
 [ext_resource type="FontFile" uid="uid://d304qwinvdngc" path="res://art assets/determination.ttf" id="3_al0y2"]
 [ext_resource type="Texture2D" uid="uid://7luj6m86xc7f" path="res://art assets/Lakaru_Concerned.png" id="3_ft8fh"]
+[ext_resource type="Texture2D" uid="uid://caocs3f4y051y" path="res://art assets/New_Background_.png" id="3_poud7"]
+[ext_resource type="Texture2D" uid="uid://b2kvryljv6gdd" path="res://art assets/New_Twisted_.png" id="4_4w7li"]
 [ext_resource type="Texture2D" uid="uid://c3knxf7hl1ca3" path="res://art assets/Lakaru_Neutral.png" id="4_nvkd0"]
 
 [sub_resource type="Animation" id="Animation_ft8fh"]
@@ -46,6 +49,24 @@ _data = {
 
 [node name="Question 5 Scene" type="Node2D"]
 script = ExtResource("1_tody1")
+
+[node name="Cops" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(513.5, 348)
+scale = Vector2(1.0593749, 1)
+texture = ExtResource("2_v5cuf")
+
+[node name="Default" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(515, 353)
+scale = Vector2(1.0635417, 1.0125)
+texture = ExtResource("3_poud7")
+
+[node name="Twisted" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(512, 355.5)
+scale = Vector2(1.0645833, 1.0234375)
+texture = ExtResource("4_4w7li")
 
 [node name="LakaruAnger" type="Sprite2D" parent="."]
 visible = false

@@ -3,8 +3,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	if (Global.badEnding_counter > 1):
 		$LakaruConcerned.visible = true
+		$Default.visible = true
+		$Twisted.visible = false
+		
 	else: 
 		$LakaruNeutral.visible = true
 		

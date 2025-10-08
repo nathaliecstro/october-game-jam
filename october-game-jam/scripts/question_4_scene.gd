@@ -6,7 +6,9 @@ func _ready():
 	
 	if (Global.badEnding_counter >= 2):
 		$LakaruConcerned.visible = true
+		$Twisted.visible = true
 	else:
+		$Default.visible = true
 		$LakaruNeutral.visible = true
 	
 	# plays the typewriter effect animation

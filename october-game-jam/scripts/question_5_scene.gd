@@ -3,9 +3,13 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	if (Global.badEnding_counter > 4):
+	if (Global.badEnding_counter > 3):
 		$LakaruAnger.visible = true
+		$Cops.visible = true
+		
 	else:
+		#$Twisted.visible = true
+		$Default.visible = true
 		$LakaruConcerned.visible = true
 	
 	# plays the typewriter effect animation

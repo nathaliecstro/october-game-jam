@@ -2,7 +2,11 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
+	
+	if(Global.badEnding_counter == 0):
+		$Default.visible = true
+	
 	$transition/AnimationPlayer.play("fade_out")
 	await get_tree().create_timer(1.5).timeout
 	
@@ -13,7 +17,6 @@ func _ready() -> void:
 	# shows the acceptance and denial buttons on the screen
 	$ButtonManager/Acceptance.visible = true
 	$ButtonManager/Denial.visible = true
-
 
 func _on_acceptance_pressed():
 	

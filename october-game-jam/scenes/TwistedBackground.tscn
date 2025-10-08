@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2bt1a0nsrmi6"]
+
+[ext_resource type="Texture2D" uid="uid://b2kvryljv6gdd" path="res://art assets/New_Twisted_.png" id="1_7l762"]
+
+[node name="Twisted Background" type="Sprite2D"]
+texture = ExtResource("1_7l762")
